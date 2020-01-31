@@ -1,0 +1,218 @@
+$principal-color: #e67e22;
+$whitescrib: #f0ffff;
+$greyscrib: #55555a;
+$fontfamily: "Lato", sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER ////////////////////////////////////////*/
+
+header {
+  font-family: $fontfamily;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./Images/bodybackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 250px;
+    margin: 0 auto;
+
+    ul {
+      list-style: none;
+      display: flex;
+      padding-top: 30px;
+      color: $whitescrib;
+      font-size: 20px;
+
+      li {
+        text-decoration: none;
+        height: 30px;
+        margin-right: 40px;
+        font-weight: 300;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 30px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background-color: $principal-color;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover:before {
+          opacity: 1;
+        }
+      }
+      li a:hover {
+        text-decoration-color: $principal-color;
+        padding-bottom: 20px;
+      }
+    }
+
+    h1 {
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+  .titre {
+    color: $whitescrib;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-left: 180px;
+    h2 {
+      word-spacing: 4px;
+      font-weight: 300;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    a {
+      font-weight: 300;
+      text-decoration: none;
+      border-style: solid;
+      border-radius: 30px;
+      padding: 10px 30px;
+      font-size: 20px;
+      border-width: 1px;
+    }
+    .boutton1 {
+      color: $whitescrib;
+      background-color: $principal-color;
+      border-color: $principal-color;
+      margin-right: 15px;
+    }
+    .boutton2 {
+      background-color: transparent;
+      color: $principal-color;
+    }
+
+    .boutton1:hover {
+      background-color: #c76d1eda;
+    }
+
+    .boutton2:hover {
+      background-color: $principal-color;
+      color: $whitescrib;
+      border-color: $principal-color;
+    }
+  }
+}
+
+/* SECTION 1 ///////////////////////////////////////////*/
+
+.section1 {
+  color: $greyscrib;
+  font-family: $fontfamily;
+  height: 572px;
+  padding: 75px 0;
+
+  .texteh3 {
+    margin: auto 100px;
+    height: 200px;
+    h3 {
+      text-align: center;
+      font-family: $fontfamily;
+      font-weight: 300;
+      font-size: 36px;
+      position: relative;
+      padding-bottom: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10%;
+        height: 3px;
+        background-color: $principal-color;
+      }
+    }
+    p {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 145%;
+    }
+  }
+  .totalbloc {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 130px;
+    margin-top: 40px;
+
+    .sticon {
+      font-size: 22px;
+    }
+
+    i {
+      font-size: 400%;
+      color: $principal-color;
+    }
+
+    div {
+      width: 248px;
+      p {
+        line-height: 24px;
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* SECTION 2////////////////////////////////////////////////////*/
+
+.section2 {
+  .blockphoto1 {
+    display: flex;
+    .contain-img {
+      width: calc(100% / 4);
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        transition: 0.3s;
+        transform: scale(1.3);
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      &:hover::after {
+        background-color: rgba(0, 0, 0, 0);
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .blockphoto2 {
+    display: flex;
+    img {
+      width: calc(100% / 4);
+    }
+  }
+}
