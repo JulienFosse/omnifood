@@ -1,6 +1,7 @@
 $principal-color: #e67e22;
 $whitescrib: #f0ffff;
 $greyscrib: #55555a;
+$backgroundcolor: #f4f4f4;
 $fontfamily: "Lato", sans-serif;
 
 body {
@@ -181,16 +182,19 @@ header {
 .section2 {
   .blockphoto1 {
     display: flex;
+
     .contain-img {
       width: calc(100% / 4);
       height: 100%;
       overflow: hidden;
       position: relative;
+
       img {
         width: 100%;
-        transition: 0.3s;
+        transition: 0.5s;
         transform: scale(1.3);
       }
+
       &::after {
         content: "";
         width: 100%;
@@ -201,6 +205,41 @@ header {
         left: 0;
         transition: 0.3s;
       }
+
+      &:hover::after {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .blockphoto2 {
+    display: flex;
+    .contain-img {
+      width: calc(100% / 4);
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.3);
+        transition: 0.5s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+      }
+
       &:hover::after {
         background-color: rgba(0, 0, 0, 0);
       }
@@ -209,10 +248,164 @@ header {
       }
     }
   }
-  .blockphoto2 {
+}
+
+/*SECTION 3 /////////////////////////////////////////////*/
+
+.section3 {
+  padding: 80px 0px;
+  background-color: $backgroundcolor;
+
+  h3 {
+    text-align: center;
+    font-family: $fontfamily;
+    color: $greyscrib;
+    font-size: 36px;
+    font-weight: 300;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 10%;
+      background-color: $principal-color;
+      top: 70px;
+      left: 45%;
+    }
+  }
+  .totalbloc3 {
+    margin: 0px 101px;
+    margin-top: 100px;
     display: flex;
+
+    .imgtel {
+      width: 50%;
+      padding-right: 60px;
+      padding-top: 30px;
+
+      img {
+        width: 35%;
+        float: right;
+      }
+    }
+
+    .textesect3 {
+      width: 50%;
+      padding-left: 20px;
+      padding-top: 50px;
+    }
+
+    .sousblock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 90%;
+
+      .number {
+        border: solid 2px $principal-color;
+        width: 55px;
+        height: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-family: $fontfamily;
+        font-weight: 300;
+        color: $principal-color;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      p {
+        font-family: $fontfamily;
+        color: $greyscrib;
+        font-weight: 300;
+        font-size: 20px;
+        width: 100%;
+      }
+      &.number3 {
+        margin-bottom: 50px;
+      }
+    }
+
+    .imgapp {
+      width: auto;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+}
+
+/* SECTION 4/////////////////////////////////////////////////////*/
+
+.section4 {
+  padding: 80px 0;
+  h2 {
+    text-align: center;
+    font-family: $fontfamily;
+    color: $greyscrib;
+    font-size: 36px;
+    font-weight: 300;
+    position: relative;
+    margin: 0 101px 80px 101px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 10%;
+      background-color: $principal-color;
+      top: 70px;
+      left: 45%;
+    }
+  }
+
+  .totalbloc4 {
+    display: flex;
+    margin: 0px 101px;
+    justify-content: center;
+    align-items: center;
+
+    .photo {
+      margin: 0 20px;
+      width: calc(90% / 4);
+
+      h3 {
+        font-size: 22px;
+        width: 100%;
+        font-family: $fontfamily;
+        color: $greyscrib;
+        font-weight: 300;
+        margin: auto;
+        padding-bottom: 60px;
+      }
+
+      .description {
+        display: flex;
+        margin: 0;
+        i {
+          margin-right: 30px;
+          color: $principal-color;
+          font-size: 120%;
+        }
+        p {
+          margin: 0;
+          font-size: 20px;
+          font-family: $fontfamily;
+          color: $greyscrib;
+          font-weight: 300;
+          line-height: 1;
+        }
+        a {
+          color: $principal-color;
+        }
+      }
+    }
+
     img {
-      width: calc(100% / 4);
+      width: 100%;
     }
   }
 }
