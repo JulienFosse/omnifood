@@ -466,4 +466,85 @@ header .titre .boutton2:hover {
 .section4 .totalbloc4 img {
   width: 100%;
 }
+
+/*SECTION 5 ////////////////////////////////////////////*/
+.section5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./Images/pizzabackground.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./Images/pizzabackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  padding: 80px 0;
+}
+
+.section5 h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #f0ffff;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.section5 h2::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 10%;
+  background: #e67e22;
+  left: 45%;
+  top: 70px;
+}
+
+.section5 .totalbloc5 {
+  margin: 0px 101px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f0ffff;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+
+.section5 .totalbloc5 .comment {
+  color: #f0ffff;
+  width: calc(90% / 3);
+  font-size: 20px;
+  margin-right: 40px;
+  position: relative;
+}
+
+.section5 .totalbloc5 .comment::before {
+  content: "\201c";
+  position: absolute;
+  left: -10px;
+  top: -40px;
+  font-size: 100px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+
+.section5 .totalbloc5 .comment p {
+  padding-bottom: 30px;
+  height: 150px;
+}
+
+.section5 .totalbloc5 .comment .imgcomment {
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section5 .totalbloc5 .comment img {
+  width: 15%;
+  border-radius: 50px;
+  margin-right: 20px;
+}
 /*# sourceMappingURL=omnifood.css.map */
